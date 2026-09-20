@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Street Fighters Crew — автомобильная культура, DRAG, SPRINT, JIMKHANA, BATTLE ARENA и фирменный мерч.">
+  <title>STREET FIGHTERS CREW</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Russo+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="header">
+    <a class="brand" href="#home">
+      <img src="assets/sfc-logo.png" alt="Street Fighters Crew">
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#about">О НАС</a>
+      <a href="#events">СОБЫТИЯ</a>
+      <a href="#shop">МАГАЗИН</a>
+      <a href="#media">МЕДИА</a>
+      <a href="#contacts">КОНТАКТЫ</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-scanlines"></div>
+
+      <div class="hero-intro" id="heroIntro">
+        <img src="assets/sfc-logo.png" alt="Street Fighters Crew" class="hero-intro-logo">
+        <div class="hero-intro-line"></div>
+        <p>DRAG · SPRINT · JIMKHANA · BATTLE ARENA</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#shop">СМОТРЕТЬ МЕРЧ <b>↗</b></a>
+          <a class="btn ghost" href="#events">СОБЫТИЯ <b>↓</b></a>
+        </div>
+      </div>
+
+      <div class="hero-loading" id="heroLoading">
+        <span class="hero-loading-line"></span>
+        <span>STREET FIGHTERS CREW / SPB</span>
+      </div>
+
+      <div class="hero-code">SFC / 2026 / SPB</div>
+      <div class="hero-bottom"><span>01</span><i></i><span>STREET FIGHTERS CREW</span></div>
+    </section>
+
+    <div class="color-strip">
+      <span class="orange"></span><span class="orange"></span><span class="red"></span>
+      <span class="red"></span><span class="red"></span><span class="blue"></span>
+      <span class="blue"></span><span class="blue"></span>
+    </div>
+
+    <section class="intro section" id="about">
+      <div class="intro-grid">
+        <div>
+          <div class="kicker">STREET FIGHTERS CREW</div>
+          <h2>МЫ ДЕЛАЕМ<br><em>ДВИЖ.</em></h2>
+        </div>
+        <div class="intro-text">
+          <p class="big">Street Fighters Crew — это автомобильное сообщество и организаторы соревнований в Санкт-Петербурге.</p>
+          <p>DRAG и SPRINT, собственный конкурс BATTLE ARENA, первые соревнования JIMKHANA в Санкт-Петербурге, встречи, автомобили и медиа.</p>
+          <div class="stats">
+            <div><b>DRAG</b><span>RACING</span></div>
+            <div><b>SPRINT</b><span>RACING</span></div>
+            <div><b>JDM</b><span>CULTURE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="events section" id="events">
+      <div class="section-head">
+        <div>
+          <h2>СОБЫТИЯ<br><em>SFC.</em></h2>
+        </div>
+        <p>Отдельные мероприятия Street Fighters Crew.<br>Выбирай прошедшие или предстоящие.</p>
+      </div>
+
+      <div class="event-filters" id="eventFilters">
+        <button class="event-filter active" data-event-filter="upcoming">ПРЕДСТОЯЩИЕ</button>
+        <button class="event-filter" data-event-filter="past">ПРОШЕДШИЕ</button>
+      </div>
+
+      <div class="events-list" id="eventsList"></div>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="section-head shop-head">
+        <div>
+          <h2>STREET<br><em>SHOP.</em></h2>
+        </div>
+        <p>Фирменная продукция<br>Street Fighters Crew.</p>
+      </div>
+
+      <div class="shop-toolbar">
+        <div class="filters" id="filters">
+          <button class="filter active" data-filter="all">ВСЁ <small>15</small></button>
+          <button class="filter" data-filter="lamps">СВЕТИЛЬНИКИ <small>02</small></button>
+          <button class="filter" data-filter="lanyards">ЛАНЬЯРДЫ <small>10</small></button>
+          <button class="filter" data-filter="hoodies">ХУДИ <small>01</small></button>
+          <button class="filter" data-filter="tshirts">ФУТБОЛКИ <small>02</small></button>
+        </div>
+        <span class="catalog-note">КАТАЛОГ / БЕЗ ОПЛАТЫ</span>
+      </div>
+
+      <div class="products" id="products"></div>
+    </section>
+
+    
+
+    <section class="contact-cta">
+      <div class="cta-racer"></div>
+      <h2>SEE YOU<br><em>ON START.</em></h2>
+      <a class="btn primary" href="#contacts">СВЯЗАТЬСЯ С НАМИ <b>↗</b></a>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacts">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="assets/sfc-logo.png" alt="Street Fighters Crew">
+        <p>STREET FIGHTERS CREW</p>
+      </div>
+      <div class="footer-col">
+        <span>РАЗДЕЛЫ</span>
+        <a href="#about">О НАС</a>
+        <a href="#events">СОБЫТИЯ</a>
+        <a href="#shop">МАГАЗИН</a>
+        <a href="#media">МЕДИА</a>
+      </div>
+      <div class="footer-col">
+        <span>СОЦСЕТИ</span>
+        <a href="#">VK</a>
+        <a href="#">TELEGRAM</a>
+        <a href="#">YOUTUBE</a>
+      </div>
+      <div class="footer-col">
+        <span>НАПРАВЛЕНИЯ</span>
+        <a href="#events">DRAG</a>
+        <a href="#events">SPRINT</a>
+        <a href="#events">JIMKHANA</a>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 STREET FIGHTERS CREW</span><span>SAINT-PETERSBURG / RUSSIA</span></div>
+  </footer>
+
+  <div class="modal event-modal" id="eventModal" aria-hidden="true">
+    <div class="modal-backdrop" data-event-close></div>
+    <div class="event-modal-window">
+      <button class="modal-close" data-event-close>×</button>
+      <div class="event-modal-media">
+        <video id="eventModalVideo" controls playsinline preload="metadata"></video>
+        <div class="event-video-placeholder" id="eventVideoPlaceholder">
+          <b>▶</b>
+          <span>ДОБАВЬТЕ ВИДЕО #ТУРБОНОЧЬ</span>
+          <small>Файл: assets/events/turbonoch.mp4</small>
+        </div>
+      </div>
+      <div class="event-modal-info">
+        <div class="modal-category" id="eventModalStatus">ПРОШЕДШЕЕ МЕРОПРИЯТИЕ / SFC</div>
+        <h2 id="eventModalTitle"></h2>
+        <div class="event-modal-date" id="eventModalDate"></div>
+        <div class="event-modal-label">ВИДЕО ОТЧЁТ</div>
+        <p id="eventModalDescription"></p>
+        <div class="event-modal-meta">
+          <span>STREET FIGHTERS CREW</span>
+          <span id="eventModalType"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal product-modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="product-modal-window">
+      <button class="modal-close" data-close aria-label="Закрыть">×</button>
+
+      <div class="product-gallery">
+        <div class="gallery-main" id="galleryMain">
+          <button class="gallery-arrow prev" id="galleryPrev" aria-label="Предыдущая фотография">‹</button>
+          <div class="gallery-stage" id="galleryStage"></div>
+          <button class="gallery-arrow next" id="galleryNext" aria-label="Следующая фотография">›</button>
+          <div class="gallery-counter" id="galleryCounter">01 / 01</div>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs"></div>
+      </div>
+
+      <div class="modal-product-info">
+        <div class="modal-category" id="modalCategory"></div>
+        <h2 id="modalName"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-price" id="modalPrice"></div>
+
+        <div class="product-colors" id="colorBlock">
+          <span>ЦВЕТ</span>
+          <div id="modalColors"></div>
+        </div>
+
+        <div class="sizes" id="sizesBlock">
+          <span>ДОСТУПНЫЕ РАЗМЕРЫ</span>
+          <div id="modalSizes"></div>
+        </div>
+
+        <div class="size-chart" id="sizeChartBlock">
+          <button class="size-chart-toggle" id="sizeChartToggle" type="button">
+            <span>РАЗМЕРНАЯ СЕТКА</span><b>+</b>
+          </button>
+          <div class="size-chart-content" id="sizeChartContent">
+            <button class="size-chart-image-button" id="sizeChartImageButton" type="button" aria-label="Увеличить размерную сетку">
+              <img id="sizeChartImage" src="" alt="Размерная сетка">
+            </button>
+            <small>Нажмите на изображение, чтобы открыть его на весь экран.</small>
+          </div>
+        </div>
+
+        <div class="modal-video" id="videoBlock">
+          <span>ВИДЕО ОБЗОР</span>
+          <video id="productModalVideo" controls playsinline preload="metadata"></video>
+          <div class="product-video-placeholder" id="productVideoPlaceholder">
+            <b>▶</b><span>ВИДЕО ОБЗОР ПОЯВИТСЯ ЗДЕСЬ</span>
+          </div>
+        </div>
+
+        <div class="modal-bottom">Для заказа на текущем этапе свяжитесь с Street Fighters Crew. Корзина и онлайн-оплата будут добавлены на следующем этапе.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <div class="image-lightbox-backdrop" data-lightbox-close></div>
+    <button class="image-lightbox-close" data-lightbox-close aria-label="Закрыть">×</button>
+    <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Предыдущее изображение">‹</button>
+    <img id="lightboxImage" src="" alt="">
+    <button class="lightbox-arrow next" id="lightboxNext" aria-label="Следующее изображение">›</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
