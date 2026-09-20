@@ -6,7 +6,7 @@ const events = [
     status: "past",
     type: "ФЕСТИВАЛЬ",
     description: "Автомобильный фестиваль #ТУРБОНОЧЬ от Street Fighters Crew.",
-    video: "assets/events/turbonoch.mov"
+    video: "assets/events/turbonoch.mp4"
   }
 ];
 
